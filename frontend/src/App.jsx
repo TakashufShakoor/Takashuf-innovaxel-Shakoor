@@ -41,6 +41,16 @@ function App() {
     }
   };
 
+   const deleteUrl = async () => {
+    try {
+      await axios.delete(`${API_URL}/${shortCode}`);
+      setDetails(null);
+      toast.success("URL deleted!");
+    } catch (err) {
+      toast.error("Failed to delete URL");
+    }
+  };
+
   
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4">
