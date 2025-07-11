@@ -1,6 +1,7 @@
 import express from "express"
 import cors from "cors"
 import connectDB from "./config/mongodb.js"
+import "dotenv/config"
 
 // App Config
 const app = express()
