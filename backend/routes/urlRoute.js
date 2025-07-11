@@ -4,11 +4,11 @@ import { createShortURL, deleteShortURL, getOriginalURL, getURLStats, updateShor
 
 const urlRouter = express.Router()
 
-router.post("/", createShortURL);
-router.get("/:shortCode", getOriginalURL);
-router.put("/:shortCode", updateShortURL);
-router.delete("/:shortCode", deleteShortURL);
-router.get("/stats/:shortCode", getURLStats);
+urlRouter.post("/", createShortURL);
+urlRouter.get("/:shortCode", getOriginalURL);
+urlRouter.put("/:shortCode", updateShortURL);
+urlRouter.delete("/:shortCode", deleteShortURL);
+urlRouter.get("/stats/:shortCode", getURLStats);
 
 
 export default urlRouter

@@ -1,5 +1,5 @@
 import { nanoid } from 'nanoid';
-import urlModel from '../models/urlModel';
+import urlModel from '../models/urlModel.js';
 
 // Create
 const createShortURL = async (req, res) => {
