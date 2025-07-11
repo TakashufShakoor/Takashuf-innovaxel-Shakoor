@@ -52,6 +52,17 @@ function App() {
   };
 
   
+  const getStats = async () => {
+    try {
+      const res = await axios.get(`${API_URL}/stats/${shortCode}`);
+      setDetails(res.data);
+      toast.info("Stats loaded!");
+    } catch (err) {
+      toast.error("Stats not found!");
+    }
+  };
+
+  
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4">
       <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-8">
