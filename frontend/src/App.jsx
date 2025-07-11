@@ -31,6 +31,16 @@ function App() {
     }
   };
 
+   const updateUrl = async () => {
+    try {
+      const res = await axios.put(`${API_URL}/${shortCode}`, { url: newUrl });
+      setDetails(res.data);
+      toast.success("URL updated!");
+    } catch (err) {
+      toast.error("Failed to update URL");
+    }
+  };
+
   
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4">
