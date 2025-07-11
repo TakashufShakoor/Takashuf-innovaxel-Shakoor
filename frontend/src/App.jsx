@@ -21,6 +21,16 @@ function App() {
     }
   };
 
+    const getDetails = async () => {
+    try {
+      const res = await axios.get(`${API_URL}/${shortCode}`);
+      setDetails(res.data);
+      toast.success("URL found!");
+    } catch (err) {
+      toast.error("Short URL not found!");
+    }
+  };
+
   
   return (
     <div className="min-h-screen bg-gray-100 py-10 px-4">
